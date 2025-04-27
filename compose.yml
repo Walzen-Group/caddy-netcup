@@ -1,0 +1,20 @@
+services:
+  caddy:
+    image: walzen-group/caddy-netcup
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: caddy
+    env_file:
+      - .env
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /opt/caddy/data:/data
+      - /opt/caddy/config:/config
+      - /opt/caddy/static:/static
