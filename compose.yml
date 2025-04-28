@@ -3,6 +3,8 @@ services:
     image: ghcr.io/walzen-group/caddy-netcup
     container_name: caddy
     restart: unless-stopped
+    env_file:
+      - .env
     cap_add:
       - NET_ADMIN
     ports:
