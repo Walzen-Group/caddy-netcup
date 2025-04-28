@@ -1,6 +1,6 @@
 services:
   caddy:
-    image: walzen-group/caddy-netcup
+    image: ghcr.io/walzen-group/caddy-netcup
     container_name: caddy
     restart: unless-stopped
     cap_add:
