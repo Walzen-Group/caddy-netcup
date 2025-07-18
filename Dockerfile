@@ -1,6 +1,6 @@
 FROM caddy:2.10-builder AS builder
 
-RUN xcaddy build --with github.com/caddy-dns/netcup@c7dafa2ee10f3aa486d22526c34925b01df3c
+RUN xcaddy build --with github.com/caddy-dns/netcup@607c7dafa2ee10f3aa486d22526c34925b01df3c
 
 FROM caddy:2.10
 
