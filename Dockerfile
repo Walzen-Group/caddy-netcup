@@ -1,8 +1,8 @@
-FROM caddy:2.9-builder AS builder
+FROM caddy:2.10-builder AS builder
 
-RUN xcaddy build --with github.com/caddy-dns/netcup@a811da94403509715bd149669b07544706fd6d46
+RUN xcaddy build --with github.com/caddy-dns/netcup@c7dafa2ee10f3aa486d22526c34925b01df3c
 
-FROM caddy:2.9
+FROM caddy:2.10
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
