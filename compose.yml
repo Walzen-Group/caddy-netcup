@@ -10,6 +10,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "20190":"20190"
     volumes:
       - /opt/caddy/Caddyfile:/etc/caddy/Caddyfile
       - /opt/caddy/data:/data
